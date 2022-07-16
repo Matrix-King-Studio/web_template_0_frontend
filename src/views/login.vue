@@ -34,7 +34,7 @@ export default {
         state: Math.ceil(Math.random() * 100),
         style: "black",
         href: "",
-        self_redirect: false,
+        self_redirect: true,
       });
     },
   },
