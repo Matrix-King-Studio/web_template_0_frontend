@@ -36,6 +36,7 @@ export default {
       const code = this.$route.query.code;
       if (code) {
         user.wx_login(code).then(res => {
+          console.log(res);
           clearInterval(this.wx_login_interval);
           let nickname = res.data["nickname"];
           alert(`欢迎 ${nickname} 登录`);
