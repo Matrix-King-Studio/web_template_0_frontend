@@ -8,11 +8,13 @@ import user from '@/api/user'
 export default {
   name: "login",
   data() {
-    return {}
+    return {
+      wx_login_interval: null,
+    }
   },
   mounted() {
     this.get_wx_qrcode();
-    setInterval(() => {
+    this.wx_login_interval = setInterval(() => {
       this.wx_login();
     }, 1000);
   },
@@ -37,6 +39,7 @@ export default {
       if (code) {
         user.wx_login(code).then(res => {
           console.log(res);
+          clearInterval(this.wx_login_interval);
         }).catch(err => {
           console.log(err);
         });
