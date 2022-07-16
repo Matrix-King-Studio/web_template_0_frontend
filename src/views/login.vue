@@ -38,7 +38,7 @@ export default {
         user.wx_login(code).then(res => {
           console.log(res);
           clearInterval(this.wx_login_interval);
-          let nickname = res.data["nickname"];
+          let nickname = res.data["account"]["nickname"];
           alert(`欢迎 ${nickname} 登录`);
         }).catch(err => {
           console.log(err);
