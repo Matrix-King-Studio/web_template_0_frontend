@@ -34,12 +34,11 @@ export default {
     wx_login() {
       // 获取当前 URL 参数，如果有 code 则直接请求后端获取用户信息
       const code = this.$route.query.code;
-      // log code
-      console.log(`code: ${code}`);
       if (code) {
         user.wx_login(code).then(res => {
-          console.log(res);
           clearInterval(this.wx_login_interval);
+          let nickname = res.data["nickname"];
+          alert(`欢迎 ${nickname} 登录`);
         }).catch(err => {
           console.log(err);
         });
