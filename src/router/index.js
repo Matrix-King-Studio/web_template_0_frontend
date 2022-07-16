@@ -1,20 +1,17 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import {createRouter, createWebHistory} from 'vue-router'
 import login from '../views/login.vue'
 
-Vue.use(VueRouter)
-
-const routes = [
-    {
-        path: "/login",
-        name: "login",
-        component: login
-    },
-]
-
-const router = new VueRouter({
-    mode: "hash",
-    routes,
-})
+const routerHistory = createWebHistory()
+const router = createRouter({
+        history: routerHistory,
+        routes: [
+            {
+                path: "/login",
+                name: "login",
+                component: login
+            }
+        ]
+    }
+)
 
 export default router

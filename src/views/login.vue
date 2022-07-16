@@ -3,7 +3,6 @@
     <div id="wx_login_container" style="height: 300px"></div>
   </div>
 </template>
-<script type="text/javascript" src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
 <script>
 export default {
   name: "login",
