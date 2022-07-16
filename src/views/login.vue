@@ -14,7 +14,7 @@ export default {
     get_wx_qrcode() {
       let wx_login = new WxLogin({
         id: "wx_login_container",
-        appid: "wx8f8f8f8f8f8f8f8f",
+        appid: "wx53cf447461989356",
         scope: "snsapi_login",
         redirect_uri: encodeURIComponent("http://www.template.matrix-studio.top/dapi/wx_login/"),
         state: Math.ceil(Math.random() * 100),
