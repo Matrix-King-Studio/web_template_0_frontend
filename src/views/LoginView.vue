@@ -80,7 +80,6 @@
 </template>
 <script>
 import {reactive} from 'vue'
-import {WxLogin} from "@/assets/js/wxLogin"
 
 export default {
   name: 'LoginView',
