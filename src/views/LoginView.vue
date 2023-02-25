@@ -127,11 +127,11 @@ export default {
     },
     check_wx_qrcode() {
       this.checkQRCodeInterval = setInterval(() => {
-        console.log(this.$route.query);
         if (this.$route.query.code) {
           clearInterval(this.checkQRCodeInterval);
           user_api.wx_login(this.$route.query.code).then(res => {
             console.log(res);
+            alert(res);
           }).catch(err => {
             console.log(err);
           })
