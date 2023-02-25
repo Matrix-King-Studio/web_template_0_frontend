@@ -1,5 +1,4 @@
 <template>
-  <script type="text/javascript" src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
   <div class="login-container">
     <div class="title">登录</div>
     <div class="form-container">
