@@ -131,7 +131,8 @@ export default {
           clearInterval(this.checkQRCodeInterval);
           user_api.wx_login(this.$route.query.code).then(res => {
             console.log(res);
-            alert(res);
+            // 跳转回主页
+            this.$router.push({path: '/'});
           }).catch(err => {
             console.log(err);
           })
